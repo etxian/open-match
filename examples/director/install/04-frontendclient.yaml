@@ -1,0 +1,27 @@
+#!/usr/bin/env kubectl apply -f
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: om-frontendclient
+  labels:
+    app: openmatch
+    component: frontendclient
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: openmatch
+      component: frontendclient
+  template:
+    metadata:
+      labels:
+        app: openmatch
+        component: frontendclient
+    spec:
+      containers:
+        - name: frontendclient
+          image: zhany/frontendclient
+          imagePullPolicy: Always
+          args:
+            - "--frontend"
+            - "om-frontendapi.open-match"

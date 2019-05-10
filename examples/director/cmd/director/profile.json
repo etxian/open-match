@@ -1,0 +1,30 @@
+{
+  "id": "partial",
+  "name": "partialv1",
+  "hostname": "om-function",
+  "port": 50502,
+  "properties": {
+    "pools": [
+      {
+        "name": "defaultPool",
+        "filters": [
+          { "name": "mmr.rating", "attribute": "mmr.rating", "minv": "0" }
+        ]
+      }
+    ],
+    "rosters": [
+      {
+        "name": "red",
+        "players": [
+          { "pool": "defaultPool" }
+        ]
+      },
+      {
+        "name": "blue",
+        "players": [
+          { "pool": "defaultPool" }
+        ]
+      }
+    ]
+  }
+}

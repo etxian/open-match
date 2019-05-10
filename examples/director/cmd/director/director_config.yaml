@@ -1,0 +1,14 @@
+logging:
+  format: text
+  level: debug
+  source: false
+
+debug:
+  maxSends: 0
+  maxMatchesPerSend: 0
+  sleepBetweenSendsSeconds: 30
+
+agones:
+  namespace: default
+  fleetName: udp-server
+  generateName: udp-server-

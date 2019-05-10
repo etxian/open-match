@@ -17,6 +17,7 @@ module open-match.dev/open-match
 go 1.12
 
 require (
+	agones.dev/agones v0.9.0
 	contrib.go.opencensus.io/exporter/jaeger v0.1.0
 	contrib.go.opencensus.io/exporter/prometheus v0.1.0
 	contrib.go.opencensus.io/exporter/stackdriver v0.11.0
@@ -50,4 +51,6 @@ require (
 	golang.org/x/sys v0.0.0-20190405154228-4b34438f7a67 // indirect
 	google.golang.org/genproto v0.0.0-20190404172233-64821d5d2107
 	google.golang.org/grpc v1.20.0
+	k8s.io/apimachinery v0.0.0-20181126123124-70adfbae261e
+	k8s.io/client-go v8.0.0+incompatible
 )

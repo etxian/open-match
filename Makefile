@@ -877,3 +877,9 @@ endif
 endif
 
 .PHONY: docker gcloud deploy-redirect-site update-deps sync-deps sleep-10 proxy-dashboard proxy-prometheus proxy-grafana clean clean-build clean-toolchain clean-archives clean-binaries clean-protos presubmit test ci-test site-test md-test vet
+
+build-director-image: docker build-base-build-image
+	docker build -f examples/director/cmd/director/Dockerfile -t zhany/director .
+
+build-frontendclient-image: docker build-base-build-image
+	docker build -f test/cmd/frontendclient/Dockerfile -t zhany/frontendclient .
